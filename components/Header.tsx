@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ResumeIcon, MenuIcon, CloseIcon } from './Icons';
 
@@ -7,7 +6,7 @@ const ResumeModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const handleClose = () => {
     setIsClosing(true);
-    setTimeout(onClose, 300); // Duration should match the animation
+    setTimeout(onClose, 300); 
   };
 
   useEffect(() => {
@@ -108,7 +107,7 @@ const Header: React.FC = () => {
       setIsMenuOpen(false);
     }
   };
-  
+   
   const handleResumeClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
       if (isMenuOpen) setIsMenuOpen(false);
@@ -132,13 +131,17 @@ const Header: React.FC = () => {
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'bg-gray-900/80 backdrop-blur-lg shadow-xl shadow-black/30' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center gap-[10px] transition-transform duration-200 hover:scale-105">
+            
+            {/* --- IMAGE UPDATED HERE --- */}
             <a href="#home" onClick={handleNavLinkClick} className="flex-shrink-0">
               <img 
-                src="https://ik.imagekit.io/borntoflyrj/Graphics/imagesda.png?updatedAt=1759061002254" 
-                alt="Rahul Jain Logo"
-                className="h-9 w-auto object-contain max-w-[150px]"
+                src="/assets/mobile-pc-header-icon.png" 
+                alt="Rahul Jain"
+                className="w-10 h-10 rounded-full object-cover border-2 border-purple-500 shadow-md"
               />
             </a>
+            {/* ------------------------- */}
+
             <a 
               href="https://wa.me/919993681478"
               target="_blank"
@@ -148,13 +151,13 @@ const Header: React.FC = () => {
               Rahul Jain
             </a>
           </div>
-          
+           
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map(link => (
               <a key={link.href} href={link.href} onClick={handleNavLinkClick} className="nav-link-gradient text-gray-300 font-medium">{link.label}</a>
             ))}
           </nav>
-          
+           
           <div className="flex items-center gap-4">
             <button
               onClick={handleResumeClick}
