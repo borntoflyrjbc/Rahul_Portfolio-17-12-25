@@ -35,16 +35,16 @@ const Hero: React.FC = () => {
       {/* Background Image Section */}
       <div className="absolute inset-0 z-0 bg-black">
         
-        {/* PC Version Image (.jpg) */}
+        {/* PC Version Image */}
         <img
-          src="/assets/pc-hero.jpg?v=2"
+          src="/assets/pcverson-hero.jpg"
           alt="Rahul Jain PC Portrait"
           className="hidden md:block w-full h-full object-cover object-[75%_center] opacity-50 kenburns-bg"
         />
 
-        {/* Mobile Version Image (.jpeg) */}
+        {/* Mobile Version Image - Fixed path with exact spaces from your GitHub screenshot */}
         <img
-          src="/assets/mobile-hero.jpeg?v=2"
+          src="/assets/mobile verson-hero .jpeg"
           alt="Rahul Jain Mobile Portrait"
           className="block md:hidden w-full h-full object-cover object-center opacity-50 kenburns-bg"
         />
