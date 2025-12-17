@@ -32,18 +32,24 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      {/* Background Image */}
+      {/* Background Image Section */}
       <div className="absolute inset-0 z-0 bg-black">
+        
+        {/* PC Version Image (Hidden on Mobile) */}
         <img
-          src="https://ik.imagekit.io/borntoflyrj/Graphics/fina_image_rahu_dsxftc.jpg?updatedAt=1759060987186"
-          alt="Rahul Jain's portrait"
+          src="/assets/pcverson-hero.jpg"
+          alt="Rahul Jain PC Portrait"
           className="hidden md:block w-full h-full object-cover object-[75%_center] opacity-50 kenburns-bg"
         />
+
+        {/* Mobile Version Image (Visible only on Mobile) */}
         <img
-          src="https://ik.imagekit.io/borntoflyrj/Graphics/use%20mobile.jpeg?updatedAt=1759064859199"
-          alt="Rahul Jain's portrait"
+          src="/assets/mobile verson-hero.jpeg"
+          alt="Rahul Jain Mobile Portrait"
           className="block md:hidden w-full h-full object-cover object-center opacity-50 kenburns-bg"
         />
+
+        {/* Dark Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
       </div>
 
