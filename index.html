@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231f2937'/%3E%3Ctext x='50' y='50' font-size='50' fill='%23ffffff' text-anchor='middle' dy='.3em' font-family='Poppins, sans-serif' font-weight='bold'%3ERJ%3C/text%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul - Video Editor & Motion Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #010101;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+        color: #F0F0F0;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Aggressive Image & Icon Resets */
+      img, video, svg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      /* Safety cap for SVGs so they never exceed viewport width or unreasonable heights */
+      svg {
+        max-height: 100px; 
+      }
+
+      .glass-section {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      .glass-section h1, .glass-section h2, .glass-section h3, .glass-section h4 {
+        color: #FFFFFF;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+      .glass-section p, .glass-section span, .glass-section li {
+         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      
+      .text-gray-300 { color: #F0F0F0 !important; }
+      .text-gray-400 { color: #ced4da !important; }
+
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-scroll-left {
+          animation: scroll-left 40s linear infinite;
+          width: max-content;
+      }
+      .animate-scroll-left:hover {
+          animation-play-state: paused;
+      }
+      .scroller-container {
+          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          overflow: hidden;
+      }
+
+      .ai-tool-tag {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+
+      .ai-tool-tag:hover {
+        position: relative;
+        z-index: 10;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .animate-scroll-left {
+          animation-duration: 25s;
+        }
+        .ai-tool-tag {
+          font-size: 0.875rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
